@@ -35,4 +35,11 @@ $(function () {
         return date;
     }
 
+    $('#to').on('change', function () {
+        var uts = new Date($('#to').val()).getTime() / 1000;
+        $('#lbl-message').text(uts);
+    });
+
+
+
 })
