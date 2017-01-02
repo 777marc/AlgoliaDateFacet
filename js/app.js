@@ -35,9 +35,14 @@ $(function () {
         return date;
     }
 
+    $('#from').on('change', function () {
+        var uts = new Date($('#from').val()).getTime() / 1000;
+        $('#lbl-from-message').text(uts);
+    });
+
     $('#to').on('change', function () {
         var uts = new Date($('#to').val()).getTime() / 1000;
-        $('#lbl-message').text(uts);
+        $('#lbl-to-message').text(uts);
     });
 
 
