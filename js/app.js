@@ -35,11 +35,11 @@ $(function () {
         return date;
     }
 
+    // Here is where you add the unix timestamp as a refinement and trigger the search
     $('#from').on('change', function () {
         var uts = new Date($('#from').val()).getTime() / 1000;
-        $('#lbl-from-message').text(uts);
-
         if(! isNaN(uts)) {
+            $('#lbl-from-message').text(uts);
             helper.addNumericRefinement('sort_date','>=',uts).search();
         }
 
@@ -47,9 +47,8 @@ $(function () {
 
     $('#to').on('change', function () {
         var uts = new Date($('#to').val()).getTime() / 1000;
-        $('#lbl-to-message').text(uts);
-
         if(! isNaN(uts)) {
+            $('#lbl-to-message').text(uts);
             helper.addNumericRefinement('sort_date','<=',uts).search();
         }
 
