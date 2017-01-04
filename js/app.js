@@ -38,13 +38,21 @@ $(function () {
     $('#from').on('change', function () {
         var uts = new Date($('#from').val()).getTime() / 1000;
         $('#lbl-from-message').text(uts);
+
+        if(! isNaN(uts)) {
+            helper.addNumericRefinement('sort_date','>=',uts).search();
+        }
+
     });
 
     $('#to').on('change', function () {
         var uts = new Date($('#to').val()).getTime() / 1000;
         $('#lbl-to-message').text(uts);
+
+        if(! isNaN(uts)) {
+            helper.addNumericRefinement('sort_date','<=',uts).search();
+        }
+
     });
-
-
 
 })

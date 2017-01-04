@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Algolia Date Facet Filter</title>
 
     <link href="css/style.css" type="text/css" />
 
@@ -40,10 +40,25 @@
             To Unix Timestamp:<label id="lbl-to-message"></label>
             <br>
 
+            <body>
+            <div id="facet-list">
+                <div class="facets-wrapper">
+                    <h1>Facets</h1>
+                    <div id="facets"></div>
+                </div>
+            </div>
+
+            <div class="hits-wrapper" id=container>
+                <h1>Results</h1>
+                <div id="hits"></div>
+            </div>
+
         </div>
     </div>
 </div>
-
+<script src='https://cdn.jsdelivr.net/g/algoliasearch@3(algoliasearchLite.min.js),algoliasearch.helper@2'></script>
 <script src="js/app.js"></script>
+<script src="config.js"></script>
+<script src="js/algolia.js"></script>
 </body>
 </html>

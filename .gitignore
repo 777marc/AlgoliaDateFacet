@@ -1,0 +1,12 @@
+
+.idea/
+.idea/AlgoliaDateFacet.iml
+.idea/dbnavigator.xml
+.idea/encodings.xml
+.idea/jsLibraryMappings.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+
+# sensitive info
+config.js
